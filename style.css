@@ -1,0 +1,492 @@
+*, * ::before, * ::after { box-sizing : border-box ; margin : 0 ; padding : 0 ; }
+
+:root {
+  --red : #cc1f27 ;
+  --navy : #1a2a3a ;
+  --white : #ffffff ;
+  --text : #333333 ;
+}
+
+Body {
+  Font-family : ‘Lato’, sans-serif ;
+  Color : var(--text) ;
+}
+
+/* TOP BAR */
+.top-bar {
+  Background : var(--navy) ;
+  Color : var(--white) ;
+  Display : flex ;
+  Justify-content : space-between ;
+  Align-items : center ;
+  Padding : 10px 40px ;
+  Font-size : 13px ;
+}
+.top-bar .info {
+  Display : flex ;
+  align-items: center;
+  Gap : 30px ;
+}
+.top-bar .cta-btn {
+  Background : var(--red) ;
+  Color : var(--white) ;
+  Padding : 8px 20px ;
+  Text-decoration : none ;
+  Font-weight : 700 ;
+  Font-size : 13px ;
+  Letter-spacing : 1px ;
+  Text-transform : uppercase ;
+}
+.top-bar .cta-btn :hover { background : #a81820 ; }
+
+/* NAVBAR */
+Nav {
+  Display : flex ;
+  Justify-content : space-between ;
+  Align-items : center ;
+  Padding : 14px 40px ;
+  Background : var(--white) ;
+  Box-shadow : 0 2px 8px rgba(0,0,0,0.07) ;
+  border-bottom: 3px solid red;
+}
+.logo-content{
+  display:flex;
+    align-items:center;
+    gap:20px;
+
+}
+.logo { 
+  text-decoration : none ;
+  justify-content: space-between;
+ }
+ .logo-text{
+  padding: 20px 10px;
+ }
+.firm-name {
+  Font-family : ‘Playfair Display’, serif ;
+  Font-size : 20px ;
+  Color : var(--red) ;
+  Letter-spacing : 1px ;
+}
+.tagline {
+  Font-size : 9px ;
+  Color : var(--navy) ;
+  Letter-spacing : 2px ;
+  Text-transform : uppercase ;
+}
+.nav-links {
+  display:flex;
+  margin-left:auto;
+  Gap : 28px ;
+  List-style : none ;
+}
+.nav-links a {
+  Text-decoration : none ;
+  Color : var(--navy) ;
+  Font-size : 14px ;
+  Font-weight : 700 ;
+  padding-left: 25px;
+}
+.nav-links a:hover { color: red;
+    transition: 0.5s;}
+.nav-actions {
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-left:30px;
+}
+.hamburger {
+  Background : var(--red) ;
+  Border : none ;
+  Padding : 8px 12px ;
+  Cursor : pointer ;
+  Display : flex ;
+  Flex-direction : column ;
+  Gap : 4px ;
+}
+.hamburger span {
+  Display : block ;
+  Width : 20px ;
+  Height : 2px ;
+  Background : var(--white) ;
+}
+
+/* HERO */
+.hero {
+  
+  Position : relative ;
+  Min-height : 380px ;
+  Display : flex ;
+  Align-items : center ;
+  Overflow : hidden ;
+  Background : #e8e8e8 ;
+}
+.hero-img{
+    flex:1;
+    min-height:500px;
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(255,255,255,.9),
+            rgba(255,255,255,0)
+        ),
+        url("images3.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-bg {
+  Position : absolute ;
+  Inset : 0 ;
+  Background :
+    Linear-gradient(to right, rgba(255,255,255,0.92) 45%, rgba(255,255,255,0.3) 100%),
+    url(‘https://images.unsplash.com/photo-1589829545856-d10d557cf95f ?w=1200&q=80’) center/cover no-repeat ;
+}
+.hero-content {
+  Position : relative ;
+  z-index : 2 ;
+  padding : 60px 40px 60px 60px ;
+  max-width : 560px ;
+}
+.hero-content h1 {
+  Font-family : ‘Playfair Display’, serif ;
+  Font-size : 25px ;
+  Line-height : 1.2 ;
+  Color : var(--navy) ;
+  Margin-bottom : 20px ;
+}
+.highlight { color : var(--red) ; }
+.hero-content p {
+  Font-size : 15px ;
+  Color : #555 ;
+  Line-height : 1.7 ;
+  Margin-bottom : 30px ;
+}
+.hero-btn {
+  Display : inline-flex ;
+  Align-items : center ;
+  Gap : 10px ;
+  Background : var(--red) ;
+  Color : var(--white) ;
+  Padding : 13px 28px ;
+  Font-weight : 700 ;
+  Font-size : 13px ;
+  Letter-spacing : 1.5px ;
+  Text-transform : uppercase ;
+  Text-decoration : none ;
+}
+.hero-btn :hover { background : #a81820 ; }
+.hero-arrow {
+  Position : absolute ;
+  Top : 50% ;
+  Right : 20px ;
+  Transform : translateY(-50%) ;
+  Background : var(--red) ;
+  Color : white ;
+  Border : none ;
+  Padding : 14px 10px ;
+  Cursor : pointer ;
+  Font-size : 28px ;
+  z-index : 3 ;
+}
+.hero-arrow-left { left : 20px ; right : auto ; }
+
+/* CONTACT STRIP */
+.contact-strip {
+  Display : flex ;
+  Justify-content : space-between ;
+  Align-items : center ;
+  Background : var(--white) ;
+  Padding : 0 40px ;
+}
+.contact-box {
+  Display : flex ;
+  Align-items : center ;
+  Gap : 16px ;
+  Background : var(--red) ;
+  Color : var(--white) ;
+  Padding : 22px 30px ;
+  Flex : 1 ;
+  Max-width : 340px ;
+}
+.contact-box .label { font-size : 12px ; opacity : 0.85 ; }
+.contact-box .value { font-size : 18px ; font-weight : 700 ; }
+.social-icons {
+  Display : flex ;
+  Gap : 12px ;
+  Align-items : center ;
+  Flex : 1 ;
+  Justify-content : center ;
+}
+.social-icon {
+  Width : 48px ;
+  Height : 48px ;
+  Border-radius : 50% ;
+  Display : flex ;
+  Align-items : center ;
+  Justify-content : center ;
+  Text-decoration : none ;
+  Color : var(--white) ;
+  Font-weight : 700 ;
+  Font-size : 16px ;
+}
+.social-icon.fb { background : var(--navy) ; }
+.social-icon.tw { background : var(--red) ; }
+.social-icon.go { background : var(--navy) ; }
+.social-icon.ig { background : var(--navy) ; }
+
+/* PRACTICE AREAS */
+.practice {
+  Padding : 60px 40px ;
+  Background : var(--white) ;
+  Text-align : center ;
+  
+  
+}
+.section-label {
+  Font-size : 11px ;
+  Letter-spacing : 3px ;
+  Text-transform : uppercase ;
+  Color : var(--red) ;
+  Font-weight : 700 ;
+  Margin-bottom : 10px ;
+}
+.section-title {
+  Font-family : ‘Playfair Display’, serif ;
+  Font-size : 36px ;
+  Color : var(--navy) ;
+  Margin-bottom : 40px ;
+}
+.cards {
+  Display : grid ;
+  Grid-template-columns : repeat(3, 1fr) ;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+.card {
+  Position : relative ;
+  Overflow : hidden ;
+  Min-height : 280px ;
+}
+.card img {
+  Width : 100% ;
+  Height : 100% ;
+  Object-fit : cover ;
+  Display : block ;
+  Transition : transition:.4s ease;
+}
+.card:hover : transform:scale(1.08);
+
+.card-overlay {
+  Position : absolute ;
+  Inset : 0 ;
+  Background : rgba(10,20,40,0.35) ;
+}
+.card.featured { background : var(--red) ; }
+.card.featured .card-body {
+  Padding : 40px 30px ;
+  Color : var(--white) ;
+  Height : 100% ;
+  Display : flex ;
+  Flex-direction : column ;
+  Justify-content : center ;
+  background-color: red;
+  align-items: center;
+}
+.card-a {
+  text-decoration: none;
+  text-align: center;
+  text-align: none;
+  display: flex;
+}
+.card.featured h3 {
+  Font-family : ‘Playfair Display’, serif ;
+  Font-size : 22px ;
+  Margin-bottom : 16px ;
+}
+.card.featured p {
+  Font-size : 14px ;
+  Line-height : 1.7 ;
+  Margin-bottom : 24px ;
+}
+.card.featured a {
+  Color : var(--white) ;
+  Font-weight : 700 ;
+  Text-decoration : none ;
+  Font-size : 14px ;
+  Align-self : flex-start ;
+  Border-bottom : 1px solid rgba(255,255,255,0.5) ;
+}
+
+/* FOOTER */
+Footer {
+  Background : var(--navy) ;
+  Color : var(--white) ;
+  Text-align : center ;
+  Padding : 20px 40px ;
+  Font-size : 13px ;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+
+    /* TOP BAR */
+    .top-bar{
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 10px;
+        gap: 10px;
+    }
+
+    .top-bar .info{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* NAVBAR */
+    nav{
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo-content{
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .logo-text{
+        padding: 0;
+    }
+
+    .firm-name{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .tagline{
+        text-align: center;
+    }
+
+    .nav-links{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin: 20px 0;
+    }
+
+    .nav-links a{
+        padding-left: 0;
+    }
+
+    .nav-actions{
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    /* HERO */
+    .hero{
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .hero-content{
+        max-width: 100%;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero-content h1{
+        font-size: 32px;
+    }
+
+    .hero-content p{
+        font-size: 14px;
+    }
+
+    .hero-img{
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .hero-arrow{
+        display: none;
+    }
+
+    /* CONTACT STRIP */
+    .contact-strip{
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .contact-box{
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .social-icons{
+        margin: 15px 0;
+    }
+
+    /* PRACTICE AREA */
+    .practice{
+        padding: 40px 20px;
+    }
+
+    .section-title{
+        font-size: 28px;
+    }
+
+    .cards{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card{
+        min-height: 250px;
+    }
+
+    /* FOOTER */
+    footer{
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+/* PETITS SMARTPHONES */
+
+@media screen and (max-width: 480px){
+
+    .firm-name{
+        font-size: 16px;
+    }
+
+    .hero-content h1{
+        font-size: 26px;
+    }
+
+    .hero-btn{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contact-box .value{
+        font-size: 15px;
+        word-break: break-word;
+    }
+
+    .section-title{
+        font-size: 24px;
+    }
+
+    .card.featured .card-body{
+        padding: 25px 20px;
+    }
+}
+
